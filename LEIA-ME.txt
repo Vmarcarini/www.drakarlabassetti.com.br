@@ -1,0 +1,37 @@
+Landing Page - Dra. Karla Bassetti
+==================================
+
+Conteudo deste pacote:
+- index.html  -> a landing page completa (HTML + CSS + JavaScript em um unico
+                 arquivo, com as fotos ja embutidas). E so publicar este
+                 arquivo, nenhum outro passo de build e necessario.
+
+Como colocar no ar em www.drakarlabassetti.com.br
+---------------------------------------------------
+1) Registrar o dominio (se ainda nao tiver)
+   Ex: Registro.br, Hostinger, HostGator, GoDaddy etc.
+
+2) Escolher uma hospedagem e subir o arquivo "index.html"
+   Algumas opcoes simples e baratas/gratuitas:
+   - Netlify (netlify.com)      -> arrastar a pasta e soltar no painel
+   - Vercel (vercel.com)        -> arrastar a pasta e soltar no painel
+   - Hospedagem tradicional (cPanel, Hostinger, etc.) -> enviar o arquivo
+     via FTP/gerenciador de arquivos para a pasta publica do site
+     (geralmente "public_html" ou "www")
+
+3) Apontar o dominio "www.drakarlabassetti.com.br" para essa hospedagem
+   (a propria hospedagem ou registrador tem um passo a passo de DNS/CNAME).
+
+Alterar o numero de WhatsApp no futuro
+---------------------------------------
+Perto do final do arquivo index.html existe a linha:
+
+    var WHATSAPP_NUMBER = "5527997222645";
+
+Para trocar o numero, basta editar esse valor (formato: DDI + DDD + numero,
+sem espacos, tracos ou parenteses) e salvar o arquivo novamente.
+
+Duvidas ou ajustes na pagina
+------------------------------
+Qualquer alteracao de texto, cor, foto ou funcionalidade pode ser pedida
+diretamente na conversa com o Claude que esta pagina foi gerada.
