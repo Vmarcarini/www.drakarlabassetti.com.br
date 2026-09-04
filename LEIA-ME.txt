@@ -3,8 +3,8 @@ Landing Page - Dra. Karla Bassetti
 
 Conteudo deste pacote:
 - index.html  -> a landing page completa (HTML + CSS + JavaScript em um unico
-                 arquivo, com as fotos ja embutidas). E so publicar este
-                 arquivo, nenhum outro passo de build e necessario.
+                 arquivo, com as fotos e a logo ja embutidas). E so publicar
+                 este arquivo, nenhum outro passo de build e necessario.
 
 Como colocar no ar em www.drakarlabassetti.com.br
 ---------------------------------------------------
@@ -29,7 +29,15 @@ Perto do final do arquivo index.html existe a linha:
     var WHATSAPP_NUMBER = "5527997222645";
 
 Para trocar o numero, basta editar esse valor (formato: DDI + DDD + numero,
-sem espacos, tracos ou parenteses) e salvar o arquivo novamente.
+sem espacos, tracos ou parenteses) e salvar o arquivo novamente. Os botoes
+abrem o WhatsApp sem nenhuma mensagem pre-preenchida.
+
+Depoimentos
+-------------
+A secao de depoimentos usa 5 avaliacoes reais do perfil da Dra. Karla no
+Google (nota 5,0). Cada card mostra um trecho, com um botao "Ler depoimento
+completo" que expande o texto integral. Para atualizar/trocar depoimentos,
+procure por "TESTIMONIALS" dentro do index.html.
 
 Duvidas ou ajustes na pagina
 ------------------------------
