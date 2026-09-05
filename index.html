@@ -335,6 +335,12 @@
   @media (min-width:720px){ .footer-grid{ flex-direction:row; justify-content:space-between; align-items:flex-start; } }
   .footer-brand .brand{ margin-bottom:14px; }
   .footer-brand p{ font-size:13.5px; color:var(--text-muted); max-width:32ch; }
+  .footer-social{
+    display:inline-flex; align-items:center; gap:8px; margin-top:14px; font-size:13.5px; font-weight:600;
+    color:var(--accent-deep); text-decoration:none; border-bottom:1px solid transparent; padding-bottom:2px;
+    transition:border-color .2s ease;
+  }
+  .footer-social:hover{ border-color:var(--accent-deep); }
   .footer-info{ display:flex; flex-direction:column; gap:8px; font-size:14px; color:var(--text-muted); }
   .footer-info strong{ color:var(--text); font-weight:600; }
   .footer-cta{ display:flex; flex-direction:column; align-items:flex-start; gap:14px; }
@@ -642,7 +648,7 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
             </span>
           </summary>
-          <p class="faq-answer">Os atendimentos são realizados em São Mateus – ES.</p>
+          <p class="faq-answer">Os atendimentos presenciais são realizados na Policlínica em São Mateus-ES e também realizamos atendimentos online.</p>
         </details>
         <details class="faq-item">
           <summary>Como faço para agendar uma consulta?
@@ -690,6 +696,10 @@
           <span class="brand-text"><strong>Karla Bassetti</strong><span>Endocrinologia</span></span>
         </a>
         <p>Atendimento endocrinológico humanizado, individualizado e pensado para cada paciente.</p>
+        <a class="footer-social" href="https://www.instagram.com/drakarlabassetti" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          @drakarlabassetti
+        </a>
       </div>
 
       <div class="footer-info">

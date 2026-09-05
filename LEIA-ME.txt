@@ -22,6 +22,15 @@ Como colocar no ar em www.drakarlabassetti.com.br
 3) Apontar o dominio "www.drakarlabassetti.com.br" para essa hospedagem
    (a propria hospedagem ou registrador tem um passo a passo de DNS/CNAME).
 
+Se o dominio ja esta no Registro.br e o site publicado na Vercel:
+   - Em Vercel: Settings > Domains > adicionar drakarlabassetti.com.br e
+     www.drakarlabassetti.com.br (a Vercel mostra os registros A/CNAME)
+   - Em Registro.br: Meus dominios > editar zona DNS > adicionar os mesmos
+     registros que a Vercel indicou
+   - Se aparecer erro de certificado SSL mencionando DNSSEC, desative o
+     DNSSEC do dominio no Registro.br e aguarde a propagacao (algumas
+     horas) antes de tentar emitir o certificado de novo na Vercel.
+
 Alterar o numero de WhatsApp no futuro
 ---------------------------------------
 Perto do final do arquivo index.html existe a linha:
@@ -31,6 +40,12 @@ Perto do final do arquivo index.html existe a linha:
 Para trocar o numero, basta editar esse valor (formato: DDI + DDD + numero,
 sem espacos, tracos ou parenteses) e salvar o arquivo novamente. Os botoes
 abrem o WhatsApp sem nenhuma mensagem pre-preenchida.
+
+Instagram
+-----------
+O link do Instagram (@drakarlabassetti) esta no rodape da pagina, apontando
+para https://www.instagram.com/drakarlabassetti. Para trocar, procure por
+"footer-social" dentro do index.html.
 
 Depoimentos
 -------------
