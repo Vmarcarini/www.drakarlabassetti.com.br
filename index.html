@@ -1,4 +1,19 @@
-<title>Dra. Karla Bassetti</title>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Karla Bassetti | Endocrinologista em São Mateus - ES</title>
+<meta name="description" content="Dra. Karla Bassetti, endocrinologista em São Mateus - ES. Atendimento humanizado e personalizado para diabetes, tireoide, Hashimoto, lipedema, emagrecimento e reposição hormonal. Agende pelo WhatsApp.">
+<link rel="canonical" href="https://www.drakarlabassetti.com.br/">
+<meta name="theme-color" content="#3A2530">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Dra. Karla Bassetti">
+<meta property="og:title" content="Dra. Karla Bassetti | Endocrinologista em São Mateus - ES">
+<meta property="og:description" content="Atendimento endocrinológico humanizado, personalizado e individualizado. Agende sua consulta pelo WhatsApp.">
+<meta property="og:url" content="https://www.drakarlabassetti.com.br/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23C4A3AC'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='%238A6A35'%3EKB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -367,6 +382,8 @@
   .mobile-cta-bar .btn{ width:100%; }
   @media (max-width:639px){ .mobile-cta-bar{ display:block; } body{ padding-bottom:78px; } }
 </style>
+</head>
+<body>
 
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
@@ -820,6 +837,47 @@
     });
   })();
 
+  // ---------------------------------------------------------------
+  // RASTREAMENTO DO CLIQUE NO WHATSAPP (Google Analytics 4 e/ou Google Ads).
+  // Preencha apenas o que for usar. Enquanto estiver em branco, nada é
+  // carregado nem enviado ao Google.
+  //  - GA4_MEASUREMENT_ID: ID de medição do GA4 (Admin > Fluxos de dados).
+  //    Envia o evento "whatsapp_click", que depois é marcado como evento-chave
+  //    no GA4 e importado como conversão no Google Ads.
+  //  - GOOGLE_ADS_ID + GOOGLE_ADS_CONVERSION_LABEL: dados da ação de conversão
+  //    criada direto no Google Ads (só existe no Modo Especialista).
+  // ---------------------------------------------------------------
+  var GA4_MEASUREMENT_ID = "";          // ex: "G-ABC123XYZ9"
+  var GOOGLE_ADS_ID = "AW-18039101166";
+  var GOOGLE_ADS_CONVERSION_LABEL = "6uQqCL7DsbMdEO6t25lD";
+
+  (function(){
+    var firstId = GA4_MEASUREMENT_ID || GOOGLE_ADS_ID;
+    if (!firstId) return;
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    if (GA4_MEASUREMENT_ID) window.gtag('config', GA4_MEASUREMENT_ID);
+    if (GOOGLE_ADS_ID) window.gtag('config', GOOGLE_ADS_ID);
+
+    var tag = document.createElement("script");
+    tag.async = true;
+    tag.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(firstId);
+    document.head.appendChild(tag);
+
+    document.addEventListener("click", function(e){
+      var btn = e.target.closest && e.target.closest(".js-wa-link");
+      if (!btn) return;
+      if (GA4_MEASUREMENT_ID) {
+        window.gtag("event", "whatsapp_click", { send_to: GA4_MEASUREMENT_ID });
+      }
+      if (GOOGLE_ADS_ID && GOOGLE_ADS_CONVERSION_LABEL) {
+        window.gtag("event", "conversion", { send_to: GOOGLE_ADS_ID + "/" + GOOGLE_ADS_CONVERSION_LABEL });
+      }
+    });
+  })();
+
   // Reveal on scroll
   (function(){
     if (!("IntersectionObserver" in window)) {
@@ -837,3 +895,6 @@
     document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
   })();
 </script>
+
+</body>
+</html>
